@@ -159,20 +159,6 @@ const Carousel = () => {
     const removeCardEvents = (card: any, cardInfosContainerEl: any) => {
         card.removeEventListener("pointermove", ((event: any) => updateCard(event, cardInfosContainerEl)));
     }
-    const swapInfosClass = (currentInfoEl: any, previousInfoEl: any, nextInfoEl: any, direction: any) => {
-        // currentInfoEl.classList.remove("current--info");
-        // previousInfoEl.classList.remove("previous--info");
-        // nextInfoEl.classList.remove("next--info");
-        // if (direction === "right") {
-        //     currentInfoEl.classList.add("previous--info");
-        //     nextInfoEl.classList.add("current--info");
-        //     previousInfoEl.classList.add("next--info");
-        // } else if (direction === "left") {
-        //     currentInfoEl.classList.add("next--info");
-        //     nextInfoEl.classList.add("previous--info");
-        //     previousInfoEl.classList.add("current--info");
-        // }
-    }
     const changeInfo = (direction: any, cardInfosContainerEl: any, buttons: any, cardsContainerEl: any) => {
         // let currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
         // let previousInfoEl = cardInfosContainerEl.querySelector(".previous--info");
@@ -229,8 +215,6 @@ const Carousel = () => {
     ) => {
         currentCardEl.style.zIndex = -2;
     };
-
-
     const swapCards = (direction: any, cardsContainerEl: any, appBgContainerEl: any, cardInfosContainerEl: any, buttons: any) => {
         const currentCardEl = cardsContainerEl.querySelector(".current--card");
         const previousCardEl = cardsContainerEl.querySelector(".previous--card");
